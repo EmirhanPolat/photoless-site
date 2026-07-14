@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoLess — जो ज़रूरी है, उसे रखें।</title>
+  <meta name="description" content="PhotoLess आपकी फ़ोटो एक-एक करके देखने और बेवजह की भीड़ हटाने का एक शांत, निजी तरीका है। कोई अपलोड नहीं, कोई AI नहीं, कोई अकाउंट नहीं — आपकी फ़ोटो सिर्फ़ आप देखते हैं।" />
+  <meta name="theme-color" content="#EDE8D0" />
+  <link rel="canonical" href="https://photolessapp.com/hi/" />
+  <link rel="alternate" hreflang="en" href="https://photolessapp.com/" />
+  <link rel="alternate" hreflang="tr" href="https://photolessapp.com/tr/" />
+  <link rel="alternate" hreflang="de" href="https://photolessapp.com/de/" />
+  <link rel="alternate" hreflang="es" href="https://photolessapp.com/es/" />
+  <link rel="alternate" hreflang="fr" href="https://photolessapp.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://photolessapp.com/it/" />
+  <link rel="alternate" hreflang="pt" href="https://photolessapp.com/pt/" />
+  <link rel="alternate" hreflang="ru" href="https://photolessapp.com/ru/" />
+  <link rel="alternate" hreflang="ar" href="https://photolessapp.com/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://photolessapp.com/hi/" />
+  <link rel="alternate" hreflang="zh" href="https://photolessapp.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://photolessapp.com/ja/" />
+  <link rel="alternate" hreflang="x-default" href="https://photolessapp.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PhotoLess — जो ज़रूरी है, उसे रखें।" />
+  <meta property="og:description" content="अपनी फ़ोटो एक-एक करके देखें, जो यादें मायने रखती हैं उन्हें रखें, और बाकी हटा दें। आपकी फ़ोटो सिर्फ़ आप देखते हैं।" />
+  <meta property="og:url" content="https://photolessapp.com/hi/" />
+  <meta property="og:locale" content="hi_IN" />
+  <meta property="og:image" content="https://photolessapp.com/assets/PhotoLessLogo_header.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <!-- Type: Fraunces (warm editorial display) + Hanken Grotesk (calm body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/lang.js"></script>
+</head>
+<body>
+  <!-- ===================== Header ===================== -->
+  <header class="site-header" id="header">
+    <div class="wrap nav">
+      <a class="brand" href="/hi/" aria-label="PhotoLess होम">
+        <img class="logo" src="/assets/PhotoLessLogo_header.webp" alt="PhotoLess" width="900" height="278" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="मुख्य मेन्यू">
+        <a href="#how">यह कैसे काम करता है</a>
+        <a href="#privacy">प्राइवेसी</a>
+        <a href="#studio">Studio</a>
+        <a href="/hi/privacy.html">प्राइवेसी पॉलिसी</a>
+        <label class="lang-switch">
+          <span class="sr-only">भाषा</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <select id="langSelect" aria-label="भाषा">
+            <option value="en" data-href="/">English</option>
+            <option value="tr" data-href="/tr/">Türkçe</option>
+            <option value="de" data-href="/de/">Deutsch</option>
+            <option value="es" data-href="/es/">Español</option>
+            <option value="fr" data-href="/fr/">Français</option>
+            <option value="it" data-href="/it/">Italiano</option>
+            <option value="pt" data-href="/pt/">Português</option>
+            <option value="ru" data-href="/ru/">Русский</option>
+            <option value="ar" data-href="/ar/">العربية</option>
+            <option value="hi" data-href="/hi/" selected>हिन्दी</option>
+            <option value="zh" data-href="/zh/">中文</option>
+            <option value="ja" data-href="/ja/">日本語</option>
+          </select>
+        </label>
+        <button class="pill-soon" type="button" aria-disabled="true">
+          <span class="dot"></span> जल्द ही App Store पर
+        </button>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू खोलें" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== Hero ===================== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">निजी फ़ोटो सफ़ाई</p>
+          <h1 class="brand-wordmark"><span class="brand-photo">Photo</span><span class="brand-less">Less</span></h1>
+          <p class="lead">
+            <strong>जो ज़रूरी है, उसे रखें। बाकी हटा दें।</strong> अपनी फ़ोटो एक-एक करके देखें, जो यादें मायने रखती हैं उन्हें रखें, और बाकी भीड़ को जाने दें। शांत, अनडू करने लायक, और पूरी तरह निजी।
+          </p>
+
+          <div class="hero-cta">
+            <button class="pill-soon" type="button" aria-disabled="true">
+              <span class="dot"></span> जल्द ही App Store पर
+            </button>
+            <a class="btn btn-ghost" href="#how">यह कैसे काम करता है, देखें</a>
+          </div>
+
+          <ul class="hero-proof" aria-label="PhotoLess के भरोसे के वादे">
+            <li>कोई अपलोड नहीं</li>
+            <li>कोई AI विश्लेषण नहीं</li>
+            <li>पहले पुष्टि</li>
+          </ul>
+
+        </div>
+
+        <!-- Signature: a live, draggable swipe deck. The cards are not real
+             photos — because only you ever see yours — they are quiet stand-ins
+             for the moments you'd be reviewing. -->
+        <div class="hero-visual">
+          <div class="demo-phone" aria-label="PhotoLess स्वाइप रिव्यू डेमो">
+            <div class="demo-topbar">
+              <span>स्वाइप करके देखें</span>
+              <strong>सिर्फ़ डिवाइस पर</strong>
+            </div>
+
+            <div class="demo-stats" aria-hidden="true">
+              <span><b>12</b> देखी गईं</span>
+              <span><b>8</b> रखी गईं</span>
+              <span><b>4</b> देखनी बाकी</span>
+            </div>
+
+            <div class="swipe-stage" id="swipeStage" aria-label="इंटरैक्टिव डेमो: कार्ड को रखने के लिए दाईं ओर, हटाने हेतु समीक्षा के लिए बाईं ओर खींचें">
+              <div class="glow"></div>
+              <!-- cards injected by swipe.js; this static fallback keeps it meaningful without JS -->
+              <noscript>
+                <div class="card" style="position:relative">
+                  <div class="photo" style="background:linear-gradient(160deg,#1f5a50,#013e37)">
+                    <img class="shot" src="/assets/PhotoLess_happy.webp" alt="" />
+                    <span class="caption">इसे रखें<small>या इसे अलग रख दें — फ़ैसला आपका</small></span>
+                  </div>
+                  <div class="meta"><span>रखने के लिए दाईं ओर स्वाइप करें</span><span>हटाने के लिए समीक्षा करें</span></div>
+                </div>
+              </noscript>
+
+              <div class="swipe-actions" aria-hidden="true"></div>
+            </div>
+
+            <div class="demo-decision-row">
+              <button class="decision-chip decision-review" id="actDel" type="button" aria-label="हटाने के लिए समीक्षा करें">समीक्षा</button>
+              <button class="decision-chip decision-keep" id="actKeep" type="button">रखें</button>
+            </div>
+
+            <span class="swipe-hint" id="swipeHint">फ़ोटो कार्ड खींचें</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Value strip ===================== -->
+    <section class="strip band-cream" style="padding:0">
+      <div class="strip-inner">
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 15l4-4 4 4 4-5 6 6"/></svg></span>
+          <div><b>एक-एक करके</b><span>एक शांत, केंद्रित समीक्षा — कभी थंबनेल्स की दीवार नहीं।</span></div>
+        </div>
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 7"/></svg></span>
+          <div><b>कभी भी अनडू करें</b><span>आख़िरी पुष्टि तक सब कुछ वापस लिया जा सकता है। कोई हैरानी नहीं।</span></div>
+        </div>
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></span>
+          <div><b>शुरुआत मुफ़्त</b><span>रोज़ाना समीक्षा सेशन मुफ़्त। Premium ताक़तवर टूल्स जोड़ता है।</span></div>
+        </div>
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+          <div><b>12 भाषाएं</b><span>आपकी भाषा में बात करता है — हिन्दी से अंग्रेज़ी तक।</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Trust / Privacy ===================== -->
+    <section class="trust band-airy" id="privacy">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" style="justify-content:center">आपकी फ़ोटो सिर्फ़ आप देखते हैं</p>
+          <h2>प्राइवेसी कोई सेटिंग नहीं है। यह पूरा डिज़ाइन है।</h2>
+          <p class="lead">PhotoLess के पास आपकी फ़ोटो भेजने के लिए कोई सर्वर नहीं है। असल में इसका मतलब यह है:</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- cloud-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.7A4 4 0 0 0 18 10h-1.3a7 7 0 0 0-2.2-3.5"/><path d="M5 5a7 7 0 0 0 1.9 11.6"/><path d="M4 8.5A4 4 0 0 0 6 16h11"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>आपके फ़ोन में ही रहता है</h3>
+            <p>आपकी फ़ोटो किसी सर्वर या क्लाउड तक कभी नहीं पहुँचतीं — वे यहीं, आपके पास रहती हैं।</p>
+          </article>
+
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- robot-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 13h.01M15 13h.01"/><path d="M12 5V3"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>कभी स्कैन नहीं होता</h3>
+            <p>कोई AI कभी आपकी फ़ोटो नहीं देखता। समीक्षा करना पूरी तरह आपका काम है।</p>
+          </article>
+
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- account-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-3-3.87"/><path d="M9.5 7.5a3.5 3.5 0 0 1 5 0"/><circle cx="9" cy="8" r="3.2"/><path d="M3 21v-2a4 4 0 0 1 4-4h3"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>कोई साइन-अप नहीं</h3>
+            <p>खोलें और शुरू करें — न अकाउंट, न ईमेल, भरने के लिए कुछ भी नहीं।</p>
+          </article>
+
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- database-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5C5 4.1 8.1 3 12 3s7 1.1 7 2.5"/><path d="M5 5.5v6c0 1.2 2.3 2.2 5.5 2.4"/><path d="M19 5.5v6M19 12v5.5c0 1.4-3.1 2.5-7 2.5-2.2 0-4.2-.4-5.4-1"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>कोई डेटा इकट्ठा नहीं होता</h3>
+            <p>न लॉगिन, न प्रोफ़ाइल, न यह ट्रैक करना कि आप कौन हैं — PhotoLess बस आपकी सफ़ाई में मदद करता है।</p>
+          </article>
+        </div>
+
+        <p class="trust-foot reveal">और जब तक आप पुष्टि नहीं करते, कुछ भी नहीं हटता।</p>
+      </div>
+    </section>
+
+    <!-- ===================== How it works ===================== -->
+    <section class="how band-warm" id="how">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">यह कैसे काम करता है</p>
+          <h2>तीन कदम। हर एक पर कंट्रोल आपका।</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="num">01</div>
+            <h3>समीक्षा के लिए स्वाइप करें</h3>
+            <p>एक बार में एक फ़ोटो। किसी याद को रखने के लिए दाईं ओर, समीक्षा के लिए अलग रखने के लिए बाईं ओर स्वाइप करें। कभी भी, कुछ भी अनडू करें।</p>
+            <span class="tag keep">रखें →</span>
+          </div>
+          <div class="step reveal">
+            <div class="num">02</div>
+            <h3>लिस्ट की समीक्षा करें</h3>
+            <p>अभी तक कुछ भी नहीं गया। जो कुछ आपने अलग रखा वह एक समीक्षा लिस्ट में आता है, जहां आप फिर से देख सकते हैं और फ़ोटो वापस निकाल सकते हैं।</p>
+            <span class="tag mark">← हटाने के लिए समीक्षा करें</span>
+          </div>
+          <div class="step reveal">
+            <div class="num">03</div>
+            <h3>हटाने के लिए पुष्टि करें</h3>
+            <p>PhotoLess चुनी हुई फ़ोटो तभी हटाता है जब आप पुष्टि पर टैप करते हैं। हमेशा की तरह, “हाल ही में हटाए गए” से वापस पाई जा सकती हैं।</p>
+            <span class="tag wine">पहले पुष्टि</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Studio tools ===================== -->
+    <section class="studio band-cool" id="studio">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">PhotoLess Studio</p>
+          <h2>गहरी सफ़ाई के लिए दमदार टूल्स।</h2>
+          <p class="lead">जब आप रोज़ की समीक्षा से आगे जाना चाहें, Studio केंद्रित टूल्स देता है — हर एक उसी शांत पुष्टि कदम पर ख़त्म होता है।</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/similar_photos.webp" alt="नज़दीकी शॉट्स टूल, एक जैसी फ़ोटो को समूहों में दिखाते हुए" loading="lazy" /></div>
+            <div class="body">
+              <h3>नज़दीकी शॉट्स <span class="badge">Premium</span></h3>
+              <p>एक जैसी दिखने वाली फ़ोटो को समूहों में रखें, सबसे अच्छी वाली रखें और बाकी को एक ही बार में हटा दें।</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/large_photos.webp" alt="बड़ी फ़ाइलें टूल, सबसे भारी फ़ोटो दिखाते हुए" loading="lazy" /></div>
+            <div class="body">
+              <h3>बड़ी फ़ाइलें <span class="badge">Premium</span></h3>
+              <p>अपने डिवाइस की सबसे भारी फ़ोटो को साइज़ के हिसाब से सामने लाएं और जल्दी असली जगह खाली करें।</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/albums_tool.webp" alt="एल्बम टूल, एक एल्बम के भीतर सफ़ाई करते हुए" loading="lazy" /></div>
+            <div class="body">
+              <h3>एल्बम</h3>
+              <p>जब आप एक पल को एक बार में समेटना चाहें, तो समीक्षा को सिर्फ़ एक एल्बम पर केंद्रित करें।</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/PhotoLess_video.webp" alt="वीडियो समीक्षा टूल" loading="lazy" /></div>
+            <div class="body">
+              <h3>वीडियो <span class="badge">Premium</span></h3>
+              <p>अपने वीडियो को भी उसी शांत तरीके से स्वाइप करें — वे बड़ी फ़ाइलें जो चुपचाप आपका फ़ोन भर देती हैं।</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/map.webp" alt="फ़ोटो मानचित्र, फ़ोटो को जगह के हिसाब से दिखाते हुए" loading="lazy" /></div>
+            <div class="body">
+              <h3>फ़ोटो मानचित्र <span class="badge">Premium</span></h3>
+              <p>फ़ोटो को उस जगह के हिसाब से मानचित्र पर देखें जहां वे ली गई थीं — स्थानीय रूप से पढ़ा जाता है, कभी शेयर नहीं होता।</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/offline_batch.webp" alt="ऑफ़लाइन स्टैक, लोकल कॉपियाँ डाउनलोड करते हुए" loading="lazy" /></div>
+            <div class="body">
+              <h3>ऑफ़लाइन स्टैक <span class="badge">Premium</span></h3>
+              <p>अपने डिवाइस पर छोटे आकार की लोकल कॉपियाँ रखें ताकि आप बिना इंटरनेट के भी समीक्षा कर सकें।</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Testimonials ===================== -->
+    <!-- NOTE: placeholder early-tester quotes — replace with real TestFlight/beta
+         feedback before launch. -->
+    <section class="reviews band-cream" id="reviews">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" style="justify-content:center">शुरुआती टेस्टर्स से</p>
+          <h2>लोगों को फ़ोटो हटाना अब सुरक्षित लगता है।</h2>
+          <p class="lead">अपनी लाइब्रेरी पर PhotoLess आज़मा रहे लोगों की शुरुआती प्रतिक्रियाएं।</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review reveal">
+            <div class="stars" aria-label="5 में से 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote>“आख़िरकार मैंने 4,000 फ़ोटो साफ़ कीं, बिना उस डर के कि कोई ज़रूरी फ़ोटो छूट जाएगी। पुष्टि वाला कदम इसे सुरक्षित बना देता है।”</blockquote>
+            <div class="who">
+              <span class="avatar" style="background:#7F1734">E</span>
+              <div><b>Elif</b><span>iPhone 13 · 24 हज़ार फ़ोटो</span></div>
+            </div>
+          </article>
+
+          <article class="review reveal">
+            <div class="stars" aria-label="5 में से 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote>“कोई साइन-अप नहीं, कोई अपलोड नहीं — इसीलिए मुझे भरोसा हुआ। यह बस मेरी अपनी फ़ोटो दिखाता है और बीच में नहीं आता।”</blockquote>
+            <div class="who">
+              <span class="avatar" style="background:#013e37">M</span>
+              <div><b>Mert</b><span>iPhone 15 Pro · प्राइवेसी को लेकर सजग</span></div>
+            </div>
+          </article>
+
+          <article class="review reveal">
+            <div class="stars" aria-label="5 में से 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote>“एक बार में एक फ़ोटो देखने की रफ़्तार अजीब तरह से सुकून देती है। नज़दीकी शॉट्स ने मिनटों में एक साल की डुप्लीकेट सेल्फ़ी साफ़ कर दीं।”</blockquote>
+            <div class="who">
+              <span class="avatar" style="background:#3F6F93">S</span>
+              <div><b>Selin</b><span>iPhone 12 · रोज़ फ़ोटो खींचने वाली</span></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">हमारे शुरुआती टेस्ट ग्रुप की प्रतिक्रिया। लॉन्च पर यहां App Store रेटिंग दिखेगी।</p>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq band-airy" id="faq">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">जानना ज़रूरी</p>
+          <h2>सवाल, सीधे जवाब।</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <h3>क्या स्वाइप करते ही मेरी फ़ोटो तुरंत हट जाती हैं?</h3>
+            <p>नहीं। स्वाइप करने से फ़ोटो सिर्फ़ एक समीक्षा लिस्ट में जुड़ती है। जब तक आप लिस्ट देखकर पुष्टि पर टैप नहीं करते, कुछ भी नहीं हटता।</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>क्या मेरी फ़ोटो कहीं अपलोड होती हैं?</h3>
+            <p>कभी नहीं। PhotoLess के पास न सर्वर है, न क्लाउड। आपकी फ़ोटो सिर्फ़ आपके डिवाइस पर पढ़ी जाती हैं, सिर्फ़ आपको दिखाने के लिए।</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>क्या यह मेरी फ़ोटो देखने के लिए AI इस्तेमाल करता है?</h3>
+            <p>कोई AI कभी आपकी फ़ोटो नहीं देखता। PhotoLess उन्हें बस एक शांत, एक-एक करके चलने वाले फ़्लो में आपको दिखाता है ताकि फ़ैसला आप लें।</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>क्या हटाने के बाद मैं फ़ोटो वापस पा सकता हूं?</h3>
+            <p>हटाना आपके डिवाइस के सामान्य तरीके से होता है, इसलिए हटाई गई फ़ोटो आमतौर पर कुछ समय के लिए “हाल ही में हटाए गए” में रहती हैं, इससे पहले कि वे हमेशा के लिए चली जाएं।</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>क्या PhotoLess मुफ़्त है?</h3>
+            <p>हां — रोज़ाना समीक्षा सेशन मुफ़्त हैं, और सुरक्षा से जुड़े फ़ीचर्स (अनडू, समीक्षा, पुष्टि) हमेशा मुफ़्त रहते हैं। Premium अनलिमिटेड समीक्षा और Studio टूल्स अनलॉक करता है।</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>क्या मुझे अकाउंट बनाना होगा?</h3>
+            <p>न अकाउंट, न ईमेल, न लॉगिन। ऐप खोलें और शुरू करें — PhotoLess को कभी पता नहीं चलता कि आप कौन हैं।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Closing ===================== -->
+    <section class="closing band-cream">
+      <div class="wrap">
+        <div class="closing-card reveal">
+          <h2>भीड़ हटाएं, <span class="italic">यादें नहीं</span>।</h2>
+          <p>PhotoLess जल्द ही iPhone के लिए लॉन्च हो रहा है। शांत, निजी, और जब तक आप फ़ैसला न लें, तब तक पूरी तरह वापस लिया जा सकने वाला।</p>
+          <button class="pill-soon" type="button" aria-disabled="true"><span class="dot"></span> जल्द ही App Store पर</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="/hi/" aria-label="PhotoLess होम">
+            <img class="logo" src="/assets/PhotoLessLogo_header.webp" alt="PhotoLess" width="900" height="278" />
+          </a>
+          <p class="footer-tag">जो ज़रूरी है, उसे रखें। बाकी हटा दें। उन लोगों के लिए एक निजी फ़ोटो क्लीनर जिन्हें अपनी यादों की परवाह है।</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>प्रोडक्ट</h4>
+            <a href="#how">यह कैसे काम करता है</a>
+            <a href="#privacy">प्राइवेसी</a>
+            <a href="#studio">Studio</a>
+          </div>
+          <div class="footer-col">
+            <h4>कानूनी</h4>
+            <a href="/hi/privacy.html">प्राइवेसी पॉलिसी</a>
+            <a href="mailto:info@photolessapp.com">संपर्क</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> PhotoLess. सर्वाधिकार सुरक्षित।</span>
+        <span>आपकी फ़ोटो सिर्फ़ आप देखते हैं।</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PL_I18N = {"card1Title":"इसे रखें","card1Sub":"जो यादें मायने रखती हैं","card2Title":"एक बार और देखें","card2Sub":"आप हमेशा अनडू कर सकते हैं","card3Title":"भीड़ हटाएं","card3Sub":"अतिरिक्त फ़ोटो अलग रखें","card4Title":"अभी तक कुछ भी नहीं गया","card4Sub":"हटाने से पहले समीक्षा करें","cardAria":"रखने के लिए दाईं ओर, हटाने से पहले समीक्षा के लिए बाईं ओर खींचें।","stampKeep":"रखें","stampReview":"समीक्षा","metaSwipe":"समीक्षा के लिए स्वाइप करें","metaConfirm":"पहले पुष्टि","hintDone":"एक शांत फ़ोटो लाइब्रेरी के लिए तैयार","downloadAria":"App Store पर PhotoLess खोलें","downloadKicker":"PhotoLess आज़माएं","downloadTitle":"जो ज़रूरी है, उसे रखें।","downloadCopy":"सुरक्षित रूप से, अपने डिवाइस पर समीक्षा करें, और कुछ भी हटाने से पहले पुष्टि करें।","downloadButton":"App Store पर देखें"};</script>
+  <script src="/swipe.js?v=20260714"></script>
+</body>
+</html>

@@ -248,6 +248,58 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
 
 .nav-toggle { display: none; }
 
+/* Language picker — a native select so it works everywhere, dressed to match
+   the nav links rather than the OS. */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.lang-switch:hover { color: var(--text); }
+.lang-switch svg { width: 17px; height: 17px; flex: none; }
+.lang-switch select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0 2px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: inherit;
+  cursor: pointer;
+}
+.lang-switch select:focus-visible {
+  outline: 2px solid var(--burgundy);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================================
+   Right-to-left (Arabic)
+   The layout is flex/grid and mostly mirrors itself; these are the places
+   that hard-code a direction.
+   ========================================================================= */
+[dir="rtl"] .hero-copy,
+[dir="rtl"] .doc-wrap { text-align: right; }
+[dir="rtl"] .back svg { transform: scaleX(-1); }
+[dir="rtl"] .tag.keep::after,
+[dir="rtl"] .tag.mark::before { transform: scaleX(-1); }
+[dir="rtl"] blockquote { text-align: right; }
+[dir="rtl"] .doc-wrap ul { padding-right: 20px; padding-left: 0; }
+
 /* =========================================================================
    Hero
    ========================================================================= */
@@ -1061,6 +1113,7 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
     padding: 8px 24px 20px;
   }
   .nav-links.open a { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .nav-links.open .lang-switch { padding: 14px 0; }
   .nav-links.open .pill-soon { margin-top: 14px; justify-content: center; }
   .nav-toggle {
     display: grid; place-items: center;

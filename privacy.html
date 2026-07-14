@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,25 +8,57 @@
   <meta name="theme-color" content="#EDE8D0" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://photolessapp.com/privacy.html" />
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="alternate" hreflang="en" href="https://photolessapp.com/privacy.html" />
+  <link rel="alternate" hreflang="tr" href="https://photolessapp.com/tr/privacy.html" />
+  <link rel="alternate" hreflang="de" href="https://photolessapp.com/de/privacy.html" />
+  <link rel="alternate" hreflang="es" href="https://photolessapp.com/es/privacy.html" />
+  <link rel="alternate" hreflang="fr" href="https://photolessapp.com/fr/privacy.html" />
+  <link rel="alternate" hreflang="it" href="https://photolessapp.com/it/privacy.html" />
+  <link rel="alternate" hreflang="pt" href="https://photolessapp.com/pt/privacy.html" />
+  <link rel="alternate" hreflang="ru" href="https://photolessapp.com/ru/privacy.html" />
+  <link rel="alternate" hreflang="ar" href="https://photolessapp.com/ar/privacy.html" />
+  <link rel="alternate" hreflang="hi" href="https://photolessapp.com/hi/privacy.html" />
+  <link rel="alternate" hreflang="zh" href="https://photolessapp.com/zh/privacy.html" />
+  <link rel="alternate" hreflang="ja" href="https://photolessapp.com/ja/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://photolessapp.com/privacy.html" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/lang.js"></script>
 </head>
 <body>
   <header class="site-header" id="header">
     <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="PhotoLess home">
-        <img class="logo" src="assets/PhotoLessLogo_header.webp" alt="PhotoLess" width="900" height="278" />
+      <a class="brand" href="/" aria-label="PhotoLess home">
+        <img class="logo" src="/assets/PhotoLessLogo_header.webp" alt="PhotoLess" width="900" height="278" />
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="index.html#how">How it works</a>
-        <a href="index.html#privacy">Privacy</a>
-        <a href="index.html#studio">Studio</a>
+        <a href="/#how">How it works</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#studio">Studio</a>
         <a href="mailto:info@photolessapp.com">Contact</a>
+        <label class="lang-switch">
+          <span class="sr-only">Language</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <select id="langSelect" aria-label="Language">
+            <option value="en" data-href="/privacy.html" selected>English</option>
+            <option value="tr" data-href="/tr/privacy.html">Türkçe</option>
+            <option value="de" data-href="/de/privacy.html">Deutsch</option>
+            <option value="es" data-href="/es/privacy.html">Español</option>
+            <option value="fr" data-href="/fr/privacy.html">Français</option>
+            <option value="it" data-href="/it/privacy.html">Italiano</option>
+            <option value="pt" data-href="/pt/privacy.html">Português</option>
+            <option value="ru" data-href="/ru/privacy.html">Русский</option>
+            <option value="ar" data-href="/ar/privacy.html">العربية</option>
+            <option value="hi" data-href="/hi/privacy.html">हिन्दी</option>
+            <option value="zh" data-href="/zh/privacy.html">中文</option>
+            <option value="ja" data-href="/ja/privacy.html">日本語</option>
+          </select>
+        </label>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -38,7 +70,7 @@
 
   <main class="doc">
     <div class="wrap doc-wrap">
-      <a class="back" href="index.html">
+      <a class="back" href="/">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         Back to PhotoLess
       </a>
@@ -48,28 +80,14 @@
       <p class="updated">Last updated: 27 June 2026</p>
 
       <div class="summary">
-        <strong>The short version.</strong> PhotoLess has no servers and no cloud.
-        Your photos and videos are read on your device only, to show them to you so
-        you can decide what to keep or delete. Nothing is uploaded, nothing is
-        analyzed by AI, and you never create an account. The only data that ever
-        leaves your phone is a small amount of anonymous app-usage and purchase
-        information described below — never your medias.
+        <strong>The short version.</strong> PhotoLess has no servers and no cloud. Your photos and videos are read on your device only, to show them to you so you can decide what to keep or delete. Nothing is uploaded, nothing is analyzed by AI, and you never create an account. The only data that ever leaves your phone is a small amount of anonymous app-usage and purchase information described below — never your medias.
       </div>
 
       <h2>Who this applies to</h2>
-      <p>
-        This policy covers the PhotoLess mobile app ("PhotoLess", "the app", "we",
-        "us") and this website. PhotoLess is an independent app. By using it, you
-        agree to this policy.
-      </p>
+      <p>This policy covers the PhotoLess mobile app ("PhotoLess", "the app", "we", "us") and this website. PhotoLess is an independent app. By using it, you agree to this policy.</p>
 
       <h2>Your photos and videos</h2>
-      <p>
-        To do its job, PhotoLess asks your operating system for permission to access
-        your photo library. With that permission, the app reads your photos and
-        videos <strong>locally, on your device</strong>, so it can display them and
-        let you sort them into "keep" and "review to delete".
-      </p>
+      <p>To do its job, PhotoLess asks your operating system for permission to access your photo library. With that permission, the app reads your photos and videos <strong>locally, on your device</strong>, so it can display them and let you sort them into "keep" and "review to delete".</p>
       <ul>
         <li><strong>No uploads.</strong> Your photos and videos are never sent to us, to any server, or to any cloud service. There is no backend to send them to.</li>
         <li><strong>No AI analysis.</strong> Your photos are never scanned, classified, or processed by artificial intelligence.</li>
@@ -79,52 +97,19 @@
       </ul>
 
       <h2>Information that does leave your device</h2>
-      <p>
-        PhotoLess itself never transmits your photos. To run a sustainable app, a
-        limited set of <strong>non-photo</strong> information is handled by a few
-        trusted services. None of it can identify you personally, and none of it
-        includes the content of your photos.
-      </p>
+      <p>PhotoLess itself never transmits your photos. To run a sustainable app, a limited set of <strong>non-photo</strong> information is handled by a few trusted services. None of it can identify you personally, and none of it includes the content of your photos.</p>
 
       <h3>Anonymous usage analytics</h3>
-      <p>
-        We use <a class="inline" href="https://aptabase.com/legal/privacy" target="_blank" rel="noopener">Aptabase</a>,
-        a privacy-friendly analytics service, to understand how the app is used in
-        aggregate — for example, how many people start a review session or open a
-        tool. This helps us fix problems and improve PhotoLess. Aptabase is designed
-        to be privacy-first: it does <strong>not</strong> use cookies or persistent
-        cross-app identifiers, does not build advertising profiles, and does not
-        collect personal data. No photo content is ever included in analytics.
-      </p>
+      <p>We use <a class="inline" href="https://aptabase.com/legal/privacy" target="_blank" rel="noopener">Aptabase</a>, a privacy-friendly analytics service, to understand how the app is used in aggregate — for example, how many people start a review session or open a tool. This helps us fix problems and improve PhotoLess. Aptabase is designed to be privacy-first: it does <strong>not</strong> use cookies or persistent cross-app identifiers, does not build advertising profiles, and does not collect personal data. No photo content is ever included in analytics.</p>
 
       <h3>Purchases and subscriptions</h3>
-      <p>
-        If you buy PhotoLess Premium, the purchase is processed by Apple through the
-        App Store. We use <a class="inline" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a>
-        to manage entitlements and validate purchases. These services receive the
-        information needed to complete and restore a purchase (such as an anonymous
-        app user identifier and transaction details). We never receive your full
-        payment card details — those are handled entirely by Apple.
-      </p>
+      <p>If you buy PhotoLess Premium, the purchase is processed by Apple through the App Store. We use <a class="inline" href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a> to manage entitlements and validate purchases. These services receive the information needed to complete and restore a purchase (such as an anonymous app user identifier and transaction details). We never receive your full payment card details — those are handled entirely by Apple.</p>
 
       <h3>Optional rewarded ads</h3>
-      <p>
-        PhotoLess may offer an <strong>optional</strong> "watch a short video to earn
-        bonus sessions" feature, served by Google AdMob. These ads are shown only if
-        you choose to watch one — there are no banners or forced ads. When an ad is
-        shown, the ad provider may collect device and advertising identifiers to
-        deliver and measure the ad, as described in
-        <a class="inline" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising policies</a>.
-        If you never tap to watch an ad, this data is not collected for ads.
-      </p>
+      <p>PhotoLess may offer an <strong>optional</strong> "watch a short video to earn bonus sessions" feature, served by Google AdMob. These ads are shown only if you choose to watch one — there are no banners or forced ads. When an ad is shown, the ad provider may collect device and advertising identifiers to deliver and measure the ad, as described in <a class="inline" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising policies</a>. If you never tap to watch an ad, this data is not collected for ads.</p>
 
       <h3>Optional reminders</h3>
-      <p>
-        If you allow notifications, PhotoLess schedules a few gentle reminders to
-        come back and keep tidying. These are <strong>local</strong> notifications
-        generated on your device — there is no server sending you push messages, and
-        you can turn them off any time in Settings.
-      </p>
+      <p>If you allow notifications, PhotoLess schedules a few gentle reminders to come back and keep tidying. These are <strong>local</strong> notifications generated on your device — there is no server sending you push messages, and you can turn them off any time in Settings.</p>
 
       <h2>What we do not do</h2>
       <ul>
@@ -136,39 +121,20 @@
       </ul>
 
       <h2>Permissions you control</h2>
-      <p>
-        Photo access, notifications, and location metadata are all controlled by you
-        in your device's settings, and can be changed or revoked at any time. If you
-        grant "limited" photo access, PhotoLess can only see the photos you
-        specifically selected.
-      </p>
+      <p>Photo access, notifications, and location metadata are all controlled by you in your device's settings, and can be changed or revoked at any time. If you grant "limited" photo access, PhotoLess can only see the photos you specifically selected.</p>
 
       <h2>Children</h2>
-      <p>
-        PhotoLess is not directed to children under 13 (or the minimum age required
-        in your country) and does not knowingly collect information from them.
-      </p>
+      <p>PhotoLess is not directed to children under 13 (or the minimum age required in your country) and does not knowingly collect information from them.</p>
 
       <h2>This website</h2>
-      <p>
-        This website is informational. It does not set advertising or tracking
-        cookies. Fonts are loaded from Google Fonts, which may receive your IP
-        address as a normal part of serving the font files.
-      </p>
+      <p>This website is informational. It does not set advertising or tracking cookies. Fonts are loaded from Google Fonts, which may receive your IP address as a normal part of serving the font files.</p>
 
       <h2>Changes to this policy</h2>
-      <p>
-        We may update this policy as the app evolves. When we do, we will revise the
-        "Last updated" date above. Material changes will be reflected here before
-        they take effect.
-      </p>
+      <p>We may update this policy as the app evolves. When we do, we will revise the "Last updated" date above. Material changes will be reflected here before they take effect.</p>
 
       <div class="contact">
         <h3 style="margin-top:0">Contact</h3>
-        <p style="margin-bottom:0">
-          Questions about your privacy or this policy? Email
-          <a class="inline" href="mailto:info@photolessapp.com">info@photolessapp.com</a>.
-        </p>
+        <p style="margin-bottom:0">Questions about your privacy or this policy? Email <a class="inline" href="mailto:info@photolessapp.com">info@photolessapp.com</a>.</p>
       </div>
     </div>
   </main>
@@ -182,6 +148,6 @@
     </div>
   </footer>
 
-  <script src="swipe.js"></script>
+  <script src="/swipe.js?v=20260714"></script>
 </body>
 </html>

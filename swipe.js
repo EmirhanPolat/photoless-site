@@ -64,13 +64,21 @@
   var APP_STORE_URL = 'https://apps.apple.com/search?term=PhotoLess';
   var SWIPES_BEFORE_DOWNLOAD_CARD = 3;
 
+  // Copy is injected per page by the site generator (window.PL_I18N), so the
+  // deck speaks the same language as the page around it. The English strings
+  // below are the fallback if that script tag is ever missing.
+  var T = window.PL_I18N || {};
+  function t(key, fallback) {
+    return T[key] || fallback;
+  }
+
   // The PhotoLess character on each card — playful, branded, never an empty
   // tile. The gradient sits behind the art for warmth and caption legibility.
   var MEMORIES = [
-    { img: 'assets/PhotoLess_cute.webp', g: 'linear-gradient(160deg,#f3ead2,#dceaf4)', t: 'Keep this one', s: 'The memories that matter' },
-    { img: 'assets/PhotoLess_happy.webp', g: 'linear-gradient(160deg,#e1ede2,#f3e3e8)', t: 'Take another look', s: 'You can always undo' },
-    { img: 'assets/PhotoLess_one_eye.webp', g: 'linear-gradient(160deg,#dceaf4,#ede8d0)', t: 'Clear the clutter', s: 'Set the extras aside' },
-    { img: 'assets/PhotoLess_happy.webp', g: 'linear-gradient(160deg,#ede8d0,#e1ede2)', t: 'Nothing is gone yet', s: 'Review before you delete' }
+    { img: '/assets/PhotoLess_cute.webp', g: 'linear-gradient(160deg,#f3ead2,#dceaf4)', t: t('card1Title', 'Keep this one'), s: t('card1Sub', 'The memories that matter') },
+    { img: '/assets/PhotoLess_happy.webp', g: 'linear-gradient(160deg,#e1ede2,#f3e3e8)', t: t('card2Title', 'Take another look'), s: t('card2Sub', 'You can always undo') },
+    { img: '/assets/PhotoLess_one_eye.webp', g: 'linear-gradient(160deg,#dceaf4,#ede8d0)', t: t('card3Title', 'Clear the clutter'), s: t('card3Sub', 'Set the extras aside') },
+    { img: '/assets/PhotoLess_happy.webp', g: 'linear-gradient(160deg,#ede8d0,#e1ede2)', t: t('card4Title', 'Nothing is gone yet'), s: t('card4Sub', 'Review before you delete') }
   ];
 
   var hint = document.getElementById('swipeHint');
@@ -87,7 +95,7 @@
     var card = document.createElement('div');
     card.className = 'card';
     card.setAttribute('role', 'group');
-    card.setAttribute('aria-label', mem.t + '. Drag right to keep, or left to review before deleting.');
+    card.setAttribute('aria-label', mem.t + '. ' + t('cardAria', 'Drag right to keep, or left to review before deleting.'));
 
     var photo = document.createElement('div');
     photo.className = 'photo';
@@ -103,14 +111,14 @@
 
     var keep = document.createElement('div');
     keep.className = 'stamp keep';
-    keep.textContent = 'Keep';
+    keep.textContent = t('stampKeep', 'Keep');
     var del = document.createElement('div');
     del.className = 'stamp del';
-    del.textContent = 'Review';
+    del.textContent = t('stampReview', 'Review');
 
     var meta = document.createElement('div');
     meta.className = 'meta';
-    meta.innerHTML = '<span>Swipe to review</span><span>Confirm first</span>';
+    meta.innerHTML = '<span>' + t('metaSwipe', 'Swipe to review') + '</span><span>' + t('metaConfirm', 'Confirm first') + '</span>';
 
     photo.appendChild(keep);
     photo.appendChild(del);
@@ -247,7 +255,7 @@
     deck.forEach(function (c) { c.remove(); });
     deck = [];
     if (demoPhone) demoPhone.classList.add('download-ready');
-    if (hint) hint.textContent = 'Ready for a calmer photo library';
+    if (hint) hint.textContent = t('hintDone', 'Ready for a calmer photo library');
 
     var actions = stage.querySelector('.swipe-actions');
     var card = document.createElement('a');
@@ -255,16 +263,16 @@
     card.href = APP_STORE_URL;
     card.target = '_blank';
     card.rel = 'noopener';
-    card.setAttribute('aria-label', 'Open PhotoLess on the App Store');
+    card.setAttribute('aria-label', t('downloadAria', 'Open PhotoLess on the App Store'));
     card.innerHTML =
-      '<span class="download-kicker">Try PhotoLess</span>' +
+      '<span class="download-kicker">' + t('downloadKicker', 'Try PhotoLess') + '</span>' +
       '<span class="download-logo" aria-label="PhotoLess">' +
-        '<img class="download-mark" src="assets/icon.png" alt="" draggable="false" />' +
+        '<img class="download-mark" src="/assets/icon.png" alt="" draggable="false" />' +
         '<span class="brand-wordmark"><span class="brand-photo">Photo</span><span class="brand-less">Less</span></span>' +
       '</span>' +
-      '<span class="download-title">Keep what matters.</span>' +
-      '<span class="download-copy">Review safely, locally, and confirm before anything is deleted.</span>' +
-      '<span class="download-button">View on the App Store</span>';
+      '<span class="download-title">' + t('downloadTitle', 'Keep what matters.') + '</span>' +
+      '<span class="download-copy">' + t('downloadCopy', 'Review safely, locally, and confirm before anything is deleted.') + '</span>' +
+      '<span class="download-button">' + t('downloadButton', 'View on the App Store') + '</span>';
 
     stage.insertBefore(card, actions);
   }

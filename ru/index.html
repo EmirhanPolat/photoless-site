@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoLess — Оставь то, что важно.</title>
+  <meta name="description" content="PhotoLess — спокойный и приватный способ просматривать фото по одному и наводить порядок. Без загрузок, без ИИ, без аккаунта — фотографии видишь только ты." />
+  <meta name="theme-color" content="#EDE8D0" />
+  <link rel="canonical" href="https://photolessapp.com/ru/" />
+  <link rel="alternate" hreflang="en" href="https://photolessapp.com/" />
+  <link rel="alternate" hreflang="tr" href="https://photolessapp.com/tr/" />
+  <link rel="alternate" hreflang="de" href="https://photolessapp.com/de/" />
+  <link rel="alternate" hreflang="es" href="https://photolessapp.com/es/" />
+  <link rel="alternate" hreflang="fr" href="https://photolessapp.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://photolessapp.com/it/" />
+  <link rel="alternate" hreflang="pt" href="https://photolessapp.com/pt/" />
+  <link rel="alternate" hreflang="ru" href="https://photolessapp.com/ru/" />
+  <link rel="alternate" hreflang="ar" href="https://photolessapp.com/ar/" />
+  <link rel="alternate" hreflang="hi" href="https://photolessapp.com/hi/" />
+  <link rel="alternate" hreflang="zh" href="https://photolessapp.com/zh/" />
+  <link rel="alternate" hreflang="ja" href="https://photolessapp.com/ja/" />
+  <link rel="alternate" hreflang="x-default" href="https://photolessapp.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PhotoLess — Оставь то, что важно." />
+  <meta property="og:description" content="Просматривай фото по одному, сохраняй дорогие воспоминания и избавляйся от лишнего. Фотографии видишь только ты." />
+  <meta property="og:url" content="https://photolessapp.com/ru/" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:image" content="https://photolessapp.com/assets/PhotoLessLogo_header.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/icon.png" />
+
+  <!-- Type: Fraunces (warm editorial display) + Hanken Grotesk (calm body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/lang.js"></script>
+</head>
+<body>
+  <!-- ===================== Header ===================== -->
+  <header class="site-header" id="header">
+    <div class="wrap nav">
+      <a class="brand" href="/ru/" aria-label="Главная PhotoLess">
+        <img class="logo" src="/assets/PhotoLessLogo_header.webp" alt="PhotoLess" width="900" height="278" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Основное меню">
+        <a href="#how">Как это работает</a>
+        <a href="#privacy">Конфиденциальность</a>
+        <a href="#studio">Studio</a>
+        <a href="/ru/privacy.html">Политика конфиденциальности</a>
+        <label class="lang-switch">
+          <span class="sr-only">Язык</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <select id="langSelect" aria-label="Язык">
+            <option value="en" data-href="/">English</option>
+            <option value="tr" data-href="/tr/">Türkçe</option>
+            <option value="de" data-href="/de/">Deutsch</option>
+            <option value="es" data-href="/es/">Español</option>
+            <option value="fr" data-href="/fr/">Français</option>
+            <option value="it" data-href="/it/">Italiano</option>
+            <option value="pt" data-href="/pt/">Português</option>
+            <option value="ru" data-href="/ru/" selected>Русский</option>
+            <option value="ar" data-href="/ar/">العربية</option>
+            <option value="hi" data-href="/hi/">हिन्दी</option>
+            <option value="zh" data-href="/zh/">中文</option>
+            <option value="ja" data-href="/ja/">日本語</option>
+          </select>
+        </label>
+        <button class="pill-soon" type="button" aria-disabled="true">
+          <span class="dot"></span> Скоро в App Store
+        </button>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== Hero ===================== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Приватная очистка фото</p>
+          <h1 class="brand-wordmark"><span class="brand-photo">Photo</span><span class="brand-less">Less</span></h1>
+          <p class="lead">
+            <strong>Оставь то, что важно. Очисти остальное.</strong> Просматривай фото по одному, сохраняй дорогие воспоминания и отпускай лишнее. Спокойно, обратимо и абсолютно приватно.
+          </p>
+
+          <div class="hero-cta">
+            <button class="pill-soon" type="button" aria-disabled="true">
+              <span class="dot"></span> Скоро в App Store
+            </button>
+            <a class="btn btn-ghost" href="#how">Посмотреть, как это работает</a>
+          </div>
+
+          <ul class="hero-proof" aria-label="Обещания PhotoLess">
+            <li>Без загрузок</li>
+            <li>Без анализа ИИ</li>
+            <li>Сначала подтверждение</li>
+          </ul>
+
+        </div>
+
+        <!-- Signature: a live, draggable swipe deck. The cards are not real
+             photos — because only you ever see yours — they are quiet stand-ins
+             for the moments you'd be reviewing. -->
+        <div class="hero-visual">
+          <div class="demo-phone" aria-label="Демонстрация просмотра фото свайпами в PhotoLess">
+            <div class="demo-topbar">
+              <span>Просмотр свайпами</span>
+              <strong>Только на устройстве</strong>
+            </div>
+
+            <div class="demo-stats" aria-hidden="true">
+              <span><b>12</b> просмотрено</span>
+              <span><b>8</b> оставлено</span>
+              <span><b>4</b> осталось</span>
+            </div>
+
+            <div class="swipe-stage" id="swipeStage" aria-label="Интерактивное демо: перетащи карточку вправо, чтобы оставить, влево — чтобы отметить на удаление">
+              <div class="glow"></div>
+              <!-- cards injected by swipe.js; this static fallback keeps it meaningful without JS -->
+              <noscript>
+                <div class="card" style="position:relative">
+                  <div class="photo" style="background:linear-gradient(160deg,#1f5a50,#013e37)">
+                    <img class="shot" src="/assets/PhotoLess_happy.webp" alt="" />
+                    <span class="caption">Оставь это<small>Или отложи в сторону — решать тебе</small></span>
+                  </div>
+                  <div class="meta"><span>Смахни вправо, чтобы оставить</span><span>Отметь на удаление</span></div>
+                </div>
+              </noscript>
+
+              <div class="swipe-actions" aria-hidden="true"></div>
+            </div>
+
+            <div class="demo-decision-row">
+              <button class="decision-chip decision-review" id="actDel" type="button" aria-label="Отметить на удаление">Отметить</button>
+              <button class="decision-chip decision-keep" id="actKeep" type="button">Оставить</button>
+            </div>
+
+            <span class="swipe-hint" id="swipeHint">Перетащи карточку с фото</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Value strip ===================== -->
+    <section class="strip band-cream" style="padding:0">
+      <div class="strip-inner">
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 15l4-4 4 4 4-5 6 6"/></svg></span>
+          <div><b>По одному</b><span>Спокойный, сосредоточенный просмотр — никогда не стена миниатюр.</span></div>
+        </div>
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 7"/></svg></span>
+          <div><b>Отмена в любой момент</b><span>Всё обратимо вплоть до последнего подтверждения. Без сюрпризов.</span></div>
+        </div>
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></span>
+          <div><b>Начать бесплатно</b><span>Ежедневные сеансы просмотра бесплатны. Premium добавляет мощные инструменты.</span></div>
+        </div>
+        <div class="strip-item">
+          <span class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+          <div><b>12 языков</b><span>Говорит на твоём языке — от английского до русского.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Trust / Privacy ===================== -->
+    <section class="trust band-airy" id="privacy">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" style="justify-content:center">Твои фото видишь только ты</p>
+          <h2>Конфиденциальность — это не настройка. Это основа всего дизайна.</h2>
+          <p class="lead">У PhotoLess нет серверов, куда можно было бы отправить твои фото. Вот что это значит на практике.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- cloud-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.7A4 4 0 0 0 18 10h-1.3a7 7 0 0 0-2.2-3.5"/><path d="M5 5a7 7 0 0 0 1.9 11.6"/><path d="M4 8.5A4 4 0 0 0 6 16h11"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>Остаётся на телефоне</h3>
+            <p>Твои фото никогда не попадают на сервер или в облако — они остаются здесь, с тобой.</p>
+          </article>
+
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- robot-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 13h.01M15 13h.01"/><path d="M12 5V3"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>Никогда не сканируются</h3>
+            <p>Ни один ИИ не смотрит твои фото. Их просмотр — только твоё дело.</p>
+          </article>
+
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- account-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-3-3.87"/><path d="M9.5 7.5a3.5 3.5 0 0 1 5 0"/><circle cx="9" cy="8" r="3.2"/><path d="M3 21v-2a4 4 0 0 1 4-4h3"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>Без регистрации</h3>
+            <p>Открой и начинай — ни аккаунта, ни почты, ничего заполнять не нужно.</p>
+          </article>
+
+          <article class="trust-card reveal">
+            <div class="ic">
+              <!-- database-off -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5C5 4.1 8.1 3 12 3s7 1.1 7 2.5"/><path d="M5 5.5v6c0 1.2 2.3 2.2 5.5 2.4"/><path d="M19 5.5v6M19 12v5.5c0 1.4-3.1 2.5-7 2.5-2.2 0-4.2-.4-5.4-1"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>Данные не собираются</h3>
+            <p>Ни входа, ни профиля, ни слежки за тем, кто ты — PhotoLess просто помогает навести порядок.</p>
+          </article>
+        </div>
+
+        <p class="trust-foot reveal">И пока ты не подтвердишь, ничего не удаляется.</p>
+      </div>
+    </section>
+
+    <!-- ===================== How it works ===================== -->
+    <section class="how band-warm" id="how">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Как это работает</p>
+          <h2>Три шага. Всё под твоим контролем.</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="num">01</div>
+            <h3>Смахивай и просматривай</h3>
+            <p>Один снимок за раз. Смахни вправо, чтобы сохранить воспоминание, влево — чтобы отложить его на проверку. Отменяй что угодно и когда угодно.</p>
+            <span class="tag keep">Оставить →</span>
+          </div>
+          <div class="step reveal">
+            <div class="num">02</div>
+            <h3>Просмотри список</h3>
+            <p>Пока ничего не удалено. Всё, что ты отложил, попадает в список на проверку, где можно снова всё посмотреть и убрать фото из списка.</p>
+            <span class="tag mark">← Отметить на удаление</span>
+          </div>
+          <div class="step reveal">
+            <div class="num">03</div>
+            <h3>Подтверди удаление</h3>
+            <p>PhotoLess удаляет выбранные фото только после того, как ты нажмёшь «Подтвердить». Как обычно, их можно восстановить из «Недавно удалённых».</p>
+            <span class="tag wine">Сначала подтверждение</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Studio tools ===================== -->
+    <section class="studio band-cool" id="studio">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">PhotoLess Studio</p>
+          <h2>Мощные инструменты для глубокой уборки.</h2>
+          <p class="lead">Когда захочешь пойти дальше ежедневного просмотра, Studio предложит специальные инструменты — каждый из них заканчивается тем же спокойным шагом подтверждения.</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/similar_photos.webp" alt="Инструмент «Похожие кадры» группирует почти одинаковые фото" loading="lazy" /></div>
+            <div class="body">
+              <h3>Похожие кадры <span class="badge">Premium</span></h3>
+              <p>Группируй почти одинаковые фото, чтобы оставить лучший кадр и убрать остальные за один проход.</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/large_photos.webp" alt="Инструмент «Большие файлы» показывает самые тяжёлые фото" loading="lazy" /></div>
+            <div class="body">
+              <h3>Большие файлы <span class="badge">Premium</span></h3>
+              <p>Находи самые тяжёлые фото на устройстве по размеру на диске и быстро освобождай настоящее место.</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/albums_tool.webp" alt="Инструмент «Альбомы» для уборки внутри одного альбома" loading="lazy" /></div>
+            <div class="body">
+              <h3>Альбомы</h3>
+              <p>Сосредоточь просмотр на одном альбоме, когда хочешь навести порядок за один раз.</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/PhotoLess_video.webp" alt="Инструмент просмотра видео" loading="lazy" /></div>
+            <div class="body">
+              <h3>Видео <span class="badge">Premium</span></h3>
+              <p>Просматривай видео так же спокойно — те самые крупные файлы, что незаметно заполняют память телефона.</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/map.webp" alt="Карта фото показывает снимки по местам" loading="lazy" /></div>
+            <div class="body">
+              <h3>Карта фото <span class="badge">Premium</span></h3>
+              <p>Просматривай фото по месту съёмки на карте — читается только на устройстве и никогда не передаётся.</p>
+            </div>
+          </article>
+
+          <article class="tool reveal">
+            <div class="thumb"><img src="/assets/offline_batch.webp" alt="Офлайн-пачка загружает локальные копии" loading="lazy" /></div>
+            <div class="body">
+              <h3>Офлайн-пачка <span class="badge">Premium</span></h3>
+              <p>Храни уменьшенные локальные копии фото на устройстве, чтобы просматривать их без подключения к интернету.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Testimonials ===================== -->
+    <!-- NOTE: placeholder early-tester quotes — replace with real TestFlight/beta
+         feedback before launch. -->
+    <section class="reviews band-cream" id="reviews">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow" style="justify-content:center">От первых тестировщиков</p>
+          <h2>Людям спокойно отпускать лишнее.</h2>
+          <p class="lead">Первые впечатления тех, кто уже пробует PhotoLess на своих библиотеках.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review reveal">
+            <div class="stars" aria-label="5 из 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote>“Наконец-то я разобрал 4000 фото без паники, что удалю что-то важное. Шаг с подтверждением даёт чувство безопасности.”</blockquote>
+            <div class="who">
+              <span class="avatar" style="background:#7F1734">E</span>
+              <div><b>Elif</b><span>iPhone 13 · 24 тыс. фото</span></div>
+            </div>
+          </article>
+
+          <article class="review reveal">
+            <div class="stars" aria-label="5 из 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote>“Без регистрации, без загрузок — вот почему я доверился. Он просто показывает мои фото и не мешает.”</blockquote>
+            <div class="who">
+              <span class="avatar" style="background:#013e37">M</span>
+              <div><b>Mert</b><span>iPhone 15 Pro · заботится о приватности</span></div>
+            </div>
+          </article>
+
+          <article class="review reveal">
+            <div class="stars" aria-label="5 из 5">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote>“Темп «по одному фото за раз» на удивление успокаивает. «Похожие кадры» разобрали год повторяющихся селфи за пару минут.”</blockquote>
+            <div class="who">
+              <span class="avatar" style="background:#3F6F93">S</span>
+              <div><b>Selin</b><span>iPhone 12 · фотографирует каждый день</span></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">Отзывы нашей первой группы тестировщиков. Рейтинг App Store появится здесь после запуска.</p>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq band-airy" id="faq">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="eyebrow">Полезно знать</p>
+          <h2>Вопросы с простыми ответами.</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <h3>Удаляются ли фото сразу после свайпа?</h3>
+            <p>Нет. Свайп только добавляет фото в список на проверку. Ничего не удалится, пока ты не посмотришь список и не подтвердишь удаление.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>Загружаются ли мои фото куда-нибудь?</h3>
+            <p>Никогда. У PhotoLess нет серверов и облака. Твои фото читаются на устройстве только для того, чтобы показать их тебе.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>Использует ли приложение ИИ для анализа моих фото?</h3>
+            <p>Ни один ИИ никогда не видит твои фото. PhotoLess просто показывает их тебе в спокойном режиме, по одному — решение всегда за тобой.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>Можно ли вернуть фото после удаления?</h3>
+            <p>Удаление проходит через стандартный механизм устройства, поэтому удалённые фото обычно ещё какое-то время остаются в «Недавно удалённых», прежде чем исчезнуть навсегда.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>PhotoLess бесплатный?</h3>
+            <p>Да — ежедневные сеансы просмотра бесплатны, а функции безопасности (отмена, просмотр, подтверждение) бесплатны всегда. Premium открывает безлимитный просмотр и инструменты Studio.</p>
+          </div>
+          <div class="faq-item reveal">
+            <h3>Нужен ли аккаунт?</h3>
+            <p>Аккаунт не нужен, как и почта или вход. Просто открой приложение и начни — PhotoLess никогда не узнает, кто ты.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Closing ===================== -->
+    <section class="closing band-cream">
+      <div class="wrap">
+        <div class="closing-card reveal">
+          <h2>Очисти лишнее, <span class="italic">а не воспоминания</span>.</h2>
+          <p>PhotoLess скоро выходит для iPhone. Спокойно, приватно и обратимо до самого момента твоего решения.</p>
+          <button class="pill-soon" type="button" aria-disabled="true"><span class="dot"></span> Скоро в App Store</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="/ru/" aria-label="Главная PhotoLess">
+            <img class="logo" src="/assets/PhotoLessLogo_header.webp" alt="PhotoLess" width="900" height="278" />
+          </a>
+          <p class="footer-tag">Оставь то, что важно. Очисти остальное. Приватный инструмент для уборки фото — для тех, кому дороги воспоминания.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Продукт</h4>
+            <a href="#how">Как это работает</a>
+            <a href="#privacy">Конфиденциальность</a>
+            <a href="#studio">Studio</a>
+          </div>
+          <div class="footer-col">
+            <h4>Юридическая информация</h4>
+            <a href="/ru/privacy.html">Политика конфиденциальности</a>
+            <a href="mailto:info@photolessapp.com">Контакты</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> PhotoLess. Все права защищены.</span>
+        <span>Твои фото видишь только ты.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PL_I18N = {"card1Title":"Оставь это","card1Sub":"Воспоминания, которые важны","card2Title":"Взгляни ещё раз","card2Sub":"Всегда можно отменить","card3Title":"Очисти лишнее","card3Sub":"Отложи ненужное в сторону","card4Title":"Пока ничего не удалено","card4Sub":"Просмотри перед удалением","cardAria":"Смахни вправо, чтобы оставить, или влево, чтобы отметить на удаление перед подтверждением.","stampKeep":"Оставить","stampReview":"Отметить","metaSwipe":"Смахивай, чтобы просматривать","metaConfirm":"Сначала подтверждение","hintDone":"Готово к более спокойной галерее","downloadAria":"Открыть PhotoLess в App Store","downloadKicker":"Попробуй PhotoLess","downloadTitle":"Оставь то, что важно.","downloadCopy":"Просматривай спокойно и приватно на своём устройстве — ничего не удалится без твоего подтверждения.","downloadButton":"Открыть в App Store"};</script>
+  <script src="/swipe.js?v=20260714"></script>
+</body>
+</html>
