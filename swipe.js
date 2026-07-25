@@ -61,7 +61,8 @@
   var stage = document.getElementById('swipeStage');
   if (!stage) return;
 
-  var APP_STORE_URL = 'https://apps.apple.com/search?term=PhotoLess';
+  var APP_STORE_URL =
+    'https://apps.apple.com/us/app/photoless-swipe-clean-photos/id6779804822';
   var SWIPES_BEFORE_DOWNLOAD_CARD = 3;
 
   // Copy is injected per page by the site generator (window.PL_I18N), so the

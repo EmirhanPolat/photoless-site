@@ -218,6 +218,10 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
   transition: color 0.2s ease;
 }
 .nav-links a:hover { color: var(--text); }
+/* The store link in the nav is a button, not a nav link — win the cascade back
+   from `.nav-links a` (which is more specific than `.pill-store` alone). */
+.nav-links a.pill-store,
+.nav-links a.pill-store:hover { color: #fff; }
 
 /* "Coming soon" availability pill — honest, no fake App Store link yet */
 .pill-soon {
@@ -245,6 +249,65 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
   70% { box-shadow: 0 0 0 7px rgba(206, 156, 52, 0); }
   100% { box-shadow: 0 0 0 0 rgba(206, 156, 52, 0); }
 }
+
+/* App Store links — the app is live, so every former "coming soon" pill is now a
+   real link. Two sizes: `.pill-store` in the nav (compact, burgundy, matches the
+   old pill's weight) and `.btn-store` for the hero / closing CTA (the black
+   Apple-badge look, with the Apple mark). */
+.pill-store,
+.btn-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+.pill-store {
+  padding: 9px 16px;
+  background: var(--burgundy);
+  color: #fff;
+  font-size: 0.9rem;
+}
+.btn-store {
+  padding: 12px 22px;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+}
+.pill-store:hover,
+.btn-store:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md, 0 10px 24px rgba(0, 0, 0, 0.18));
+}
+.pill-store .apple-mark,
+.btn-store .apple-mark {
+  width: 1em;
+  height: 1.15em;
+  flex: none;
+  /* The glyph's optical centre sits a touch high next to text. */
+  margin-top: -2px;
+}
+
+/* Footer social row — Instagram / TikTok, quiet until hovered. */
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer-social a {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-social a:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+.footer-social svg { width: 20px; height: 20px; display: block; }
 
 .nav-toggle { display: none; }
 
@@ -984,6 +1047,13 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
   font-size: 1rem;
 }
 .closing-card .pill-soon .dot { background: var(--gold); }
+/* On the dark closing card the black badge would disappear — invert it. */
+.closing-card .btn-store {
+  margin-top: 32px;
+  background: #fff;
+  color: var(--burgundy);
+  padding: 14px 28px;
+}
 
 /* =========================================================================
    Footer
@@ -1115,6 +1185,12 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
   .nav-links.open a { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav-links.open .lang-switch { padding: 14px 0; }
   .nav-links.open .pill-soon { margin-top: 14px; justify-content: center; }
+  .nav-links.open .pill-store {
+    margin-top: 14px;
+    justify-content: center;
+    border-bottom: none;
+    padding: 12px 16px;
+  }
   .nav-toggle {
     display: grid; place-items: center;
     width: 44px; height: 44px;
@@ -1179,6 +1255,6 @@ h3 { font-size: 1.25rem; line-height: 1.2; }
     font-size: 0.84rem;
   }
   .closing-card { padding: 48px 22px; }
-  .hero-cta .btn, .hero-cta .pill-soon { width: 100%; justify-content: center; }
+  .hero-cta .btn, .hero-cta .pill-soon, .hero-cta .btn-store { width: 100%; justify-content: center; }
   .review blockquote { font-size: 1.05rem; }
 }
