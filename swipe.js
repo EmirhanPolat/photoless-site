@@ -61,8 +61,8 @@
   var stage = document.getElementById('swipeStage');
   if (!stage) return;
 
-  var APP_STORE_URL =
-    'https://apps.apple.com/us/app/photoless-swipe-clean-photos/id6779804822';
+  // No /<country>/ segment: Apple routes each visitor to their own storefront.
+  var APP_STORE_URL = 'https://apps.apple.com/app/id6779804822';
   var SWIPES_BEFORE_DOWNLOAD_CARD = 3;
 
   // Copy is injected per page by the site generator (window.PL_I18N), so the
@@ -261,9 +261,9 @@
     var actions = stage.querySelector('.swipe-actions');
     var card = document.createElement('a');
     card.className = 'download-card';
+    // Same tab on purpose: in-app browsers (Instagram, TikTok) cannot open a
+    // new window, so target="_blank" would silently do nothing there.
     card.href = APP_STORE_URL;
-    card.target = '_blank';
-    card.rel = 'noopener';
     card.setAttribute('aria-label', t('downloadAria', 'Open PhotoLess on the App Store'));
     card.innerHTML =
       '<span class="download-kicker">' + t('downloadKicker', 'Try PhotoLess') + '</span>' +

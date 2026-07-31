@@ -7,6 +7,8 @@
   <meta name="description" content="PhotoLess は写真を一枚ずつ確認しながら、落ち着いて整理できるアプリです。アップロードなし、AI解析なし、アカウントも不要——あなたの写真を見られるのはあなただけです。" />
   <meta name="theme-color" content="#EDE8D0" />
   <link rel="canonical" href="https://photolessapp.com/ja/" />
+  <!-- Safari's Smart App Banner: one tap to the store, above our own buttons. -->
+  <meta name="apple-itunes-app" content="app-id=6779804822" />
   <link rel="alternate" hreflang="en" href="https://photolessapp.com/" />
   <link rel="alternate" hreflang="tr" href="https://photolessapp.com/tr/" />
   <link rel="alternate" hreflang="de" href="https://photolessapp.com/de/" />
@@ -38,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..560&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="/styles.css?v=20260726" />
+  <link rel="stylesheet" href="/styles.css?v=20260731" />
   <script src="/lang.js"></script>
 </head>
 <body>
@@ -72,7 +74,7 @@
             <option value="ja" data-href="/ja/" selected>日本語</option>
           </select>
         </label>
-        <a class="pill-store" href="https://apps.apple.com/us/app/photoless-swipe-clean-photos/id6779804822" target="_blank" rel="noopener" aria-label="App Store で PhotoLess をダウンロード"><svg class="apple-mark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store</span></a>
+        <a class="pill-store" href="https://apps.apple.com/app/id6779804822" aria-label="App Store で PhotoLess をダウンロード"><svg class="apple-mark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store</span></a>
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
@@ -95,7 +97,7 @@
           </p>
 
           <div class="hero-cta">
-            <a class="btn-store" href="https://apps.apple.com/us/app/photoless-swipe-clean-photos/id6779804822" target="_blank" rel="noopener" aria-label="App Store で PhotoLess をダウンロード"><svg class="apple-mark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store からダウンロード</span></a>
+            <a class="btn-store" href="https://apps.apple.com/app/id6779804822" aria-label="App Store で PhotoLess をダウンロード"><svg class="apple-mark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store からダウンロード</span></a>
             <a class="btn btn-ghost" href="#how">使い方を見る</a>
           </div>
 
@@ -420,7 +422,7 @@
         <div class="closing-card reveal">
           <h2>散らかりは片付けて、<span class="italic">思い出はそのままに</span>。</h2>
           <p>PhotoLess は iPhone で配信中です。落ち着いて、プライベートに、そしてあなたが決めるまでいつでも取り消せます。</p>
-          <a class="btn-store" href="https://apps.apple.com/us/app/photoless-swipe-clean-photos/id6779804822" target="_blank" rel="noopener" aria-label="App Store で PhotoLess をダウンロード"><svg class="apple-mark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store からダウンロード</span></a>
+          <a class="btn-store" href="https://apps.apple.com/app/id6779804822" aria-label="App Store で PhotoLess をダウンロード"><svg class="apple-mark" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span>App Store からダウンロード</span></a>
         </div>
       </div>
     </section>
@@ -463,6 +465,6 @@
   </footer>
 
   <script>window.PL_I18N = {"card1Title":"これは残す","card1Sub":"大切な思い出","card2Title":"もう一度見てみる","card2Sub":"いつでも取り消せます","card3Title":"散らかりを片付ける","card3Sub":"余分なものは脇に置く","card4Title":"まだ何も消えていません","card4Sub":"削除する前に確認を","cardAria":"右にドラッグすると残し、左にドラッグすると削除する前に確認します。","stampKeep":"残す","stampReview":"確認","metaSwipe":"スワイプして確認","metaConfirm":"確認してから削除","hintDone":"もっと落ち着いたギャラリーへ","downloadAria":"App Store で PhotoLess を開く","downloadKicker":"PhotoLess を試す","downloadTitle":"大切なものを、手元に。","downloadCopy":"端末内で安全に確認し、削除する前に必ず確認します。","downloadButton":"App Store で見る"};</script>
-  <script src="/swipe.js?v=20260726"></script>
+  <script src="/swipe.js?v=20260731"></script>
 </body>
 </html>
