@@ -73,19 +73,38 @@
     .alt u { text-decoration-color: rgba(122, 101, 112, 0.4); }
     .note { margin: 22px 0 0; font-size: 14px; color: #8A7680; }
 
-    /* Shown only inside an in-app browser, where the store handoff can fail. */
+    /*
+      Shown only inside an in-app browser, where the store handoff can fail. It
+      points at the host app's "…" menu, which sits in the browser chrome just
+      above the top-right corner of the viewport — so the hint is pinned there
+      and lets the arrow do the explaining instead of a paragraph.
+    */
     .escape {
-      margin: 0 0 22px;
-      padding: 16px 18px;
-      border-radius: 14px;
-      text-align: left;
-      background: rgba(107, 31, 58, 0.07);
-      border: 1px solid rgba(107, 31, 58, 0.16);
-      font-size: 15px;
-      line-height: 1.45;
+      position: fixed;
+      top: max(8px, env(safe-area-inset-top));
+      right: max(12px, env(safe-area-inset-right));
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      max-width: 62vw;
+      color: #6B1F3A;
+      text-align: right;
+      pointer-events: none;
     }
-    .escape b { display: block; margin-bottom: 4px; font-weight: 600; }
-    .escape span { color: #5B4750; }
+    .escape span {
+      padding-top: 26px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .escape svg {
+      width: 42px;
+      height: 40px;
+      flex: 0 0 auto;
+      color: rgba(107, 31, 58, 0.75);
+    }
+    /* Keep the centred card clear of the pinned hint on short (landscape) screens. */
+    body.has-hint { padding-top: 104px; }
     [hidden] { display: none !important; }
 
     @media (prefers-color-scheme: dark) {
@@ -93,8 +112,8 @@
       p { color: #C9B6BE; }
       .note, .alt { color: #A8939C; }
       .btn-quiet { color: #F0C9D6; border-color: rgba(240, 201, 214, 0.34); }
-      .escape { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.14); }
-      .escape span { color: #C9B6BE; }
+      .escape { color: #F0C9D6; }
+      .escape svg { color: rgba(240, 201, 214, 0.8); }
     }
   </style>
 </head>
@@ -104,16 +123,6 @@
 
     <h1>Keep what matters.</h1>
     <p id="status">Opening the App Store&hellip;</p>
-
-    <!-- Only unhidden inside an in-app browser (Instagram, TikTok, Facebook…). -->
-    <div class="escape" id="escape" hidden>
-      <b>Stuck on a blank page?</b>
-      <span>
-        This is Instagram&rsquo;s built-in browser, and it cannot open the App
-        Store. Tap <strong>&hellip;</strong> at the top right, then
-        <strong>Open in external browser</strong>.
-      </span>
-    </div>
 
     <a class="btn" id="storeLink" href="https://apps.apple.com/app/id6779804822">
       <svg viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
@@ -125,6 +134,20 @@
     <a class="alt" href="/"><u>Or read more about PhotoLess</u></a>
     <p class="note" id="note" hidden>PhotoLess is on iPhone. Open this page on your phone to install it.</p>
   </main>
+
+  <!--
+    Only unhidden inside an in-app browser (Instagram, TikTok, Facebook…), whose
+    "…" menu is the way out to Safari. Outside the card so it can be pinned to the
+    corner the arrow points at.
+  -->
+  <div class="escape" id="escape" hidden>
+    <span>Open in<br />external browser</span>
+    <svg viewBox="0 0 42 40" aria-hidden="true" focusable="false">
+      <!-- Sweeps right, then turns up: the "…" menu sits directly above this corner. -->
+      <path d="M4 36C20 36 32 28 34 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+      <path d="M28 16 34 8 40 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
 
   <script>
   (function () {
@@ -162,6 +185,7 @@
     if (inApp) {
       status.textContent = 'One tap to install PhotoLess.';
       document.getElementById('escape').hidden = false;
+      document.body.className = 'has-hint';
 
       // Undocumented but widely honoured: forces the URL open in Safari,
       // escaping the in-app browser entirely. Harmless when ignored.
