@@ -72,6 +72,8 @@
     .alt { display: block; margin-top: 20px; font-size: 15px; color: #7A6570; text-decoration: none; }
     .alt u { text-decoration-color: rgba(122, 101, 112, 0.4); }
     .note { margin: 22px 0 0; font-size: 14px; color: #8A7680; }
+    /* One tap selects the whole URL, so a failed clipboard write is still copyable by hand. */
+    .note .url { display: inline-block; margin-top: 6px; word-break: break-all; user-select: all; -webkit-user-select: all; color: #6B1F3A; }
 
     /*
       Shown only inside an in-app browser, where the store handoff can fail. It
@@ -133,6 +135,7 @@
 
     <a class="alt" href="/"><u>Or read more about PhotoLess</u></a>
     <p class="note" id="note" hidden>PhotoLess is on iPhone. Open this page on your phone to install it.</p>
+    <p class="note" id="manual" hidden>Copy this link and open it in Safari:<br /><span class="url" id="manualUrl"></span></p>
   </main>
 
   <!--
@@ -192,23 +195,27 @@
       var copyBtn = document.getElementById('copyLink');
       copyBtn.hidden = false;
       copyBtn.addEventListener('click', function () {
-        var opened = false;
-        try {
-          window.location.href = 'x-safari-' + HTTPS_URL;
-          opened = true;
-        } catch (e) { /* scheme refused */ }
+        // A refused scheme is dropped silently — assigning it never throws — so
+        // there is nothing here to test. The only honest signal that Safari took
+        // over is the page going hidden, which the timeout below checks.
+        window.location.href = 'x-safari-' + HTTPS_URL;
 
         // If Safari did not take over, leave the user something that always
-        // works: the store URL on their clipboard.
+        // works: the store URL on their clipboard, or failing that, in plain
+        // sight to copy by hand. Never claim a copy that did not happen.
         setTimeout(function () {
           if (document.visibilityState !== 'visible') return;
-          var done = function () {
-            copyBtn.textContent = 'Link copied — paste it in Safari';
+          var manual = function () {
+            copyBtn.hidden = true;
+            document.getElementById('manualUrl').textContent = HTTPS_URL;
+            document.getElementById('manual').hidden = false;
           };
           if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(HTTPS_URL).then(done, function () {});
-          } else if (opened) {
-            done();
+            navigator.clipboard.writeText(HTTPS_URL).then(function () {
+              copyBtn.textContent = 'Link copied — paste it in Safari';
+            }, manual);
+          } else {
+            manual();
           }
         }, 900);
       });
